@@ -1,0 +1,25 @@
+/* Used to control presentation, formatting, and layout. */
+/* c */
+/* modifies chunks of HTML
+	identifies sections
+		modifies the style of sections 
+			i.e. font, size, background */
+/* selectors select certain parts of the HTML (content) and styles it as we desire 
+	3 types: 
+		tags -- like types
+			tag {
+				property: transformation; 
+				property: transformation;
+			}
+		class -- just like making our own tag
+			.classname {
+				property: transformation; 
+				property: transformation;
+			}
+		id
+		*/
+
+body {
+    text-align: center;
+    background-color: #f0e8c5;
+}
