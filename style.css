@@ -164,7 +164,7 @@ h1 {
 }
 
 .dark-section {
-  background-image: url('https://github.com/ronibara/ronibara.github.io/blob/master/hockeySticks.png');
+  background-image: url('hockeySticks.png');
   background-repeat: repeat-y;
   background-size: contain;
   width: 100vw;
