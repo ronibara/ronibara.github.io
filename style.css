@@ -121,8 +121,8 @@ h1 {
 
 .top-header {
 	padding-top: 50px;
-	color: #f8f8f8;
-	background: #ffd700;
+	color: #374262;
+	background: #fff;
 }
 
 .top-message {
@@ -142,7 +142,7 @@ h1 {
 
 .top-divider {
 	width: 100%;
-	border-top: 1px solid #f8f8f8;
+	border-top: 1px solid #374262;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 	display: table;
 	height: 0px;
@@ -157,14 +157,14 @@ h1 {
 }
 
 .top-message > p {
-	font-size:14px;
+	font-size:18px;
 	line-height:22px;
 	margin-bottom:25px;
-	color:#fff;
+	color:#374262;
 }
 
 .dark-section {
-  background-image: url('../img/backgrounddark.png');
+  background-image: url('./hockeysticks.png');
   background-repeat: repeat-y;
   background-size: contain;
   width: 100vw;
