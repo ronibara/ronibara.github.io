@@ -127,3 +127,14 @@ a.btn-social, .btn-social {
   transition: 0.5s ease;
 
 }
+
+
+.footer {
+  background-color: #374262;
+}
+
+.footer-brand {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  color: #ffdf00;
+}
