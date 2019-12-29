@@ -111,7 +111,7 @@ h4 {
 
 .wrap-content2 {
 	background-image: url('soundsCool.png');
-  background-size: 100% 100%;
+  background-size: contain;
   width: 100vw;
   margin-top: 0;
 }
@@ -570,6 +570,18 @@ a.btn-social, .btn-social {
   float: left;
   width: 33.33%;
 }
+.column2 {
+  float: left;
+  width: 50%;
+}
+.column3 {
+  float: left;
+  width: 60%;
+}
+.column4 {
+  float: left;
+  width: 40%;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -577,3 +589,12 @@ a.btn-social, .btn-social {
   display: table;
   clear: both;
 }
+
+@media screen and (min-width: 1088px){
+  a.navbar-item.right:hover, a.navbar-item.right.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: transparent;
+    color: #7c8bb6;
+    border: 2px solid #9da8c8;
+  }
+}
+

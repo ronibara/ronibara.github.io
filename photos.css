@@ -137,3 +137,11 @@ a.btn-social, .btn-social {
   font-size: 12px;
   color: #374262;
 }
+
+@media screen and (min-width: 1088px){
+  a.navbar-item.right:hover, a.navbar-item.right.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: transparent;
+    color: #7c8bb6;
+    border: 2px solid #9da8c8;
+  }
+}
