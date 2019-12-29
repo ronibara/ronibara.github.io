@@ -199,7 +199,7 @@ h1 {
   margin: 10px 0px 40px;
 }
 .section-title .section-number {
-  color: #ffdf00;
+  color: #ffd700;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   font-size: 20px;
 
@@ -408,7 +408,7 @@ a.btn-social, .btn-social {
 .job-title {
   font-size: 22px;
   font-weight: bold;
-  color: #bec5da;
+  color: #ffd700;
 }
 .job-company, .job-company a:hover, .job-company a:focus, .job-company a:active {
   color: #ffdf00;
