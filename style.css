@@ -439,7 +439,7 @@ a.btn-social, .btn-social {
 }
 .content-section ul li::before {
   content: "▹";
-  position: absolute;
+  position: inside;
   left: 0px;
   color: #ffdf00;
 }
@@ -1049,4 +1049,15 @@ div.thumbnail:hover {
 .img_company:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
