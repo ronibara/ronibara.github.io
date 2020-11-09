@@ -29,9 +29,19 @@
   left: -5px;
 }
 
+#topsBottoms {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
 #mid {
   box-shadow: 0 0px 0px 0 rgba(234, 234, 236,0.5);
   transition: 0.3s;
+}
+
+#works {
+  position: relative;
+  padding-left: 8%;
 }
 
 #mid:hover {
