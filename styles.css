@@ -12,6 +12,17 @@ section {
   scroll-snap-align: start;
 }*/
 
+/*iframe {
+  allowfullscreen: false;
+  loading: eager;
+  color: #ffffff;
+
+}*/
+
+.transparent {
+  background:none transparent;
+}
+
 @font-face {
     font-family: roundRohan;
     src: url("assets/RoundRohan-Regular.otf") format("opentype");
