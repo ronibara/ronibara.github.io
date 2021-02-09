@@ -19,279 +19,344 @@ section {
 
 }*/
 
-.transparent {
-  background:none transparent;
-}
+.right {
+    font-size: 1.68vw;
 
-@font-face {
-    font-family: roundRohan;
-    src: url("assets/RoundRohan-Regular.otf") format("opentype");
-}
-
-.wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-  font-size: 2rem;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
-}
-
-.paragraph {
-  margin-left: 13%;
-  margin-right: 13%;
-  /*margin-top: 30px;*/
-  margin-top: 100px;
-  font-family: roundRohan;
-  margin-bottom: 175px;
-}
-
-.yayaya {
-  margin-top: 30px;
-  margin-left: 14.22%;
-  margin-right: 14.22%;
-  column-count: 2;
-  column-gap: 7%;
-  column-width: 32.3%;
-}
-
-.row {
-}
-
-.col-md-6 {
-}
-
-p.light {
-  font-weight: lighter;
-  /*font-size: 10px;*/
-  font-size: 1rem;
-  color: #73808D;
-  margin-top: -8px;  
-  margin-bottom: 40px;
-}
-
-.yayaya img{
-/*  padding-bottom: 72px;
-*/
-  padding-bottom: 15%;
-}
-
-/*.yayaya img::hover {
-    overflow: hidden;
-    visibility: hidden;
-}*/
-
-
-p.thick1 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  /*font-size: 16px;*/
-  margin-top: 17px;
-}
-
-p.thick2 {
-  font-size: 2.6rem;
-  margin-top: -10px;
-  margin-bottom: 75px;
-  /*font-weight: bold;
-  line-height: normal;*/
-  /*font-family: roundRohan;*/
-  /*margin-bottom: 130px;*/
-  /*font-size: 40px;*/
-}
-
-p.thick3 {
-  font-size: 2rem;
-  margin-top: 60px;
-  margin-bottom: 75px;
-  font-weight: 550;
-  line-height: normal;
-  font-family: inter;
-  /*font-family: roundRohan;*/
-  /*margin-bottom: 130px;*/
-  /*font-size: 40px;*/
-}
-
-
-.wave2 {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-  font-size: 2rem;
-  margin-top: 60px;
-}
-
-.prayboiCarti {
-  font-size: 2rem;
-/*  padding-top: 150px;
-*/}
-
-
-p.thick4 {
-  font-size: 3.1rem;
-  color: #000000;
-/*  margin-bottom: 75px;
-*/  
-  font-weight: 550;
-  line-height: normal;
-  font-family: inter;
-  /*font-family: roundRohan;*/
-  /*margin-bottom: 130px;*/
-  /*font-size: 40px;*/
-}
-
-p.thick5{
-  font-size: 3.2rem;
-  margin-bottom: 125px;
-  font-weight: 550;
-  line-height: large;
-  font-family: roundRohan;
-  letter-spacing: 4px;
-  font-weight: 200px;
-}
-
-/* NAVBAR */
-#last {
-  position: relative;
-/*  right: -187px;
-*/  
-  right: -3%;
-  font-weight: bold;
-  font-size: 3rem;
-  font-family: roundRohan;
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-          transition:         transform 1s ease-in-out;
-}
-
-#last:hover {
-    -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.navbar-nav a{
-    font-size: 1.5rem;
     font-family: roundRohan;
     font-weight: bold;
+    text-decoration: none;
+    color: #48494B;
 }
 
-#navbarNavAltMarkup {
-/*    margin-left: 58.85%;
-*/    
-      /*right: -58.75%;*/
-    position: relative;   
-    left: 55%;
-/*  figure out something responsive */    
-/*    
-    margin-right: 65%; 
-    figure out what this means
-*/    
-    width: 100%;
+nav {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 12.25%;
 }
 
-.navbar{
-    margin-top: 20px;
-    background: white;
-}
-
-.navbar-brand.mb-0.h1 {
-    font-size: 26px;
-}
-
-.nav-item {
-    font-size: 16px;
-}
-
-/* FOOTER */
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
+nav ul li {
+  display: inline;
   text-decoration: none;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
-#center {
-  padding-left: 10px;
-  padding-right: 10px;
-  right: 5px;
-  position: relative;
+
+footer {
+  margin-bottom: 5%;
+  text-align: center;
 }
 
-#blue:hover {
-  color: #0072b1 !important;
-  font-size: 1.6rem;
+footer ul {
+  margin: 0 auto;
+  margin-left: 43.5%;
+}
+ 
+footer ul li {
+  text-decoration: none;
+  display: inline;
+  padding: 30px;
+} 
+
+footer ul li a img {
+  width: 40px;
 }
 
-#pink:hover {
-  color: #ea4c89 !important;
-  font-size: 1.6rem;
-}
+footer ul li a::hover {
+/*  padding-bottom: 5px;
+*/}
 
-#res:hover {
-  font-size: 1.6rem;
-}
+.transparent {
+    background:none transparent;
+  }
+  
+  @font-face {
+      font-family: roundRohan;
+      src: url("assets/RoundRohan-Regular.otf") format("opentype");
+  }
+  
+  .wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  .paragraph {
+    margin-left: 13%;
+    margin-right: 13%;
+    /*margin-top: 30px;*/
+    margin-top: 100px;
+    font-family: roundRohan;
+    margin-bottom: 175px;
+  }
+  
+  .yayaya {
+/*    margin-top: 30px;
+*/    
+/*    margin-top: -2%;
+    margin-left: 14.22%;
+    margin-right: 14.22%;
+    column-count: 2;
+    column-gap: 7%;
+    column-width: 32.3%;*/
+    margin-top: -2%;
+    margin-left: 11%;
+    margin-right: 11%;
+    column-count: 2;
+    column-gap: 10%;
+    column-width: 32.3%;
+  }
 
-#git:hover {
-  font-size: 1.6rem;
-}
+  @media screen and (max-width: 720px) {
+    .yayaya {
+      column-count: 1;
+    }
+    footer ul {
+      margin-left: 35%;
+    }
+  }
+  
+  .row {
+  }
+  
+  .col-md-6 {
+  }
+  
+  p.light {
+    font-weight: lighter;
+    /*font-size: 10px;*/
+    font-size: 1rem;
+    color: #73808D;
+    margin-top: -8px;  
+    margin-bottom: 40px;
+  }
+  
+  .yayaya img{
+  /*  padding-bottom: 72px;
+  */
+    padding-bottom: 15%;
+  }
+  
+  /*.yayaya img::hover {
+      overflow: hidden;
+      visibility: hidden;
+  }*/
+  
+  
+  p.thick1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    /*font-size: 16px;*/
+    margin-top: 17px;
+  }
+  
+  p.thick2 {
+    font-size: 2.6rem;
+    margin-top: -10px;
+    margin-bottom: 75px;
+    /*font-weight: bold;
+    line-height: normal;*/
+    /*font-family: roundRohan;*/
+    /*margin-bottom: 130px;*/
+    /*font-size: 40px;*/
+  }
+  
+  p.thick3 {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 75px;
+    font-weight: 550;
+    line-height: normal;
+    font-family: inter;
+    /*font-family: roundRohan;*/
+    /*margin-bottom: 130px;*/
+    /*font-size: 40px;*/
+  }
+  
+  
+  .wave2 {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+  
+  .prayboiCarti {
+    font-size: 2rem;
+  /*  padding-top: 150px;
+  */}
+  
+  
+  p.thick4 {
+    font-size: 3.1rem;
+    color: #000000;
+  /*  margin-bottom: 75px;
+  */  
+    font-weight: 550;
+    line-height: normal;
+    font-family: inter;
+    /*font-family: roundRohan;*/
+    /*margin-bottom: 130px;*/
+    /*font-size: 40px;*/
+  }
+  
+  p.thick5{
+    font-size: 3.6vw;
+    margin-bottom: 125px;
+    font-weight: 550;
+    line-height: large;
+    font-family: roundRohan;
+    letter-spacing: 4px;
+    font-weight: 200px;
+  }
+  
+  /* NAVBAR */
+  #last {
+    padding-right: 29%;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    font-size: 3.35vw;
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-/*WOAH WOAH WOAH JOHN CENA*/
-
-/*to make click-mosaic thing
-input[type="checkbox"] {
-    content: url('images/black.cat');
-    display: block;
-    width: 200px;
-    height: 200px;
-    -webkit-appearance: none;
-}
-input[type="checkbox"]:checked {
-    content: url('images/white.cat');
-}
-https://stackoverflow.com/questions/6813699/how-to-change-an-image-on-click-using-css-alone/17795397#17795397*/
+    font-family: roundRohan;
+      -webkit-transition: -webkit-transform 1s ease-in-out;
+            transition:         transform 1s ease-in-out;
+  }
+  
+  #last:hover {
+      -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .navbar-nav a{
+      font-size: 1.5rem;
+      font-family: roundRohan;
+      font-weight: bold;
+  }
+  
+  #navbarNavAltMarkup {
+  /*    margin-left: 58.85%;
+  */    
+        /*right: -58.75%;*/
+      position: relative;   
+      left: 55%;
+  /*  figure out something responsive */    
+  /*    
+      margin-right: 65%; 
+      figure out what this means
+  */    
+      width: 100%;
+  }
+  
+  .navbar{
+      margin-top: 20px;
+      background: white;
+  }
+  
+  .navbar-brand.mb-0.h1 {
+      font-size: 26px;
+  }
+  
+  .nav-item {
+      font-size: 16px;
+  }
+  
+  /* FOOTER */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  #center {
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 5px;
+    position: relative;
+  }
+  
+  #blue:hover {
+    color: #0072b1 !important;
+    font-size: 1.6rem;
+  }
+  
+  #pink:hover {
+    color: #ea4c89 !important;
+    font-size: 1.6rem;
+  }
+  
+  #res:hover {
+    font-size: 1.6rem;
+  }
+  
+  #git:hover {
+    font-size: 1.6rem;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  /*WOAH WOAH WOAH JOHN CENA*/
+  
+  /*to make click-mosaic thing
+  input[type="checkbox"] {
+      content: url('images/black.cat');
+      display: block;
+      width: 200px;
+      height: 200px;
+      -webkit-appearance: none;
+  }
+  input[type="checkbox"]:checked {
+      content: url('images/white.cat');
+  }
+  https://stackoverflow.com/questions/6813699/how-to-change-an-image-on-click-using-css-alone/17795397#17795397*/
+  
