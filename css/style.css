@@ -602,8 +602,10 @@ footer {
 
 @media screen and (min-width: 700px) {
   /* nav {
-    background-color: #ffffff;
+    background-color: #FDF6F4;
     width: 100%;
+    position: fixed;
+    top: 0;
   } */
 
   body {
