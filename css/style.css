@@ -16,6 +16,7 @@ font-family: 'Open Sans', sans-serif; */
 
 body {
   margin: 40px 20px 40px 20px;
+  background-color: #FDF6F4;
 }
 
 .splash, .coffee {
@@ -471,6 +472,11 @@ nav {
   margin-bottom: 40px;
 }
 
+
+.switches {
+  margin-bottom: 100px;
+}
+
 /* ABOUT */
 .portrait {
   display: none;
@@ -581,6 +587,11 @@ footer {
 
 
 @media screen and (min-width: 700px) {
+  /* nav {
+    background-color: #ffffff;
+    width: 100%;
+  } */
+
   body {
     margin: 40px 100px;
   }
@@ -781,6 +792,10 @@ footer {
 
   .item_two h1{
     text-align: center;
+  }
+
+  .switches {
+    margin-bottom: 100px;
   }
 
   footer {
@@ -1030,6 +1045,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     margin-right: 3%;
     margin-left: 3%;
+    margin-bottom: 75px;
   }
 
   /* .switches p {
