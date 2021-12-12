@@ -34,6 +34,13 @@ body {
   column-gap: 5%;
 }
 
+.brands {
+  display: grid;
+  margin-bottom: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 5%;
+}
+
 .emoji1{
   grid-row: 1/1;
   grid-column: 1/1;
@@ -148,11 +155,13 @@ body {
 h1{
   font-family: 'Lato', sans-serif;
   font-weight: 600;
+  color: #2A0704;
   /* font-size: 34px; */
 }
 
 h2{
   font-family: 'Lato', sans-serif;
+  color: #2A0704;
   font-weight: 600;
 }
 
@@ -323,6 +332,21 @@ p{
   background-color: #DFD6F6;
 }
 
+.special {
+  margin-top: 20px;
+}
+
+.tag_gray{
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  display: inline;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin-right: 10px;
+  background-color: #EDEDED;
+}
+
 /* taggies? */
 
 /* #empathize {
@@ -385,7 +409,7 @@ nav {
 }
 
 .active a{
-  color: #000000;
+  color: #2A0704;
   font-weight: bold;
   /* text-decoration: underline; */
 }
@@ -586,6 +610,10 @@ footer {
   display: inline-block;
   font-size: 2rem;
   margin-top: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
   
 
