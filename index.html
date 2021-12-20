@@ -14,7 +14,8 @@
 - html5 reset -->
 
 <!-- token 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-->
-
+<!-- old one? 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
+ -->
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -46,8 +47,17 @@
         <!-- google fonts I want -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet"> -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">  
  
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENK8EJZ08D"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-ENK8EJZ08D');
+        </script>
         <!-- Bootstrap CSS --> 
         
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
@@ -100,7 +110,7 @@
             <p class="chill">01-TASK MANAGEMENT</p>
             <p class="tag_empathize">Empathize</p><p class="tag_ideate">Ideate</p><p class="tag_define">Define</p><p class="tag_prototype">Prototype</p><p class="tag_test">Test</p>
             <h2>Shadowboxing</h2>
-            <p>Face fears to fight tasks.</p>
+            <p class="small">Face fears to fight tasks.</p>
             <a target="_blank" href="https://www.notion.so/Shadowboxing-8772f111e2b94753bf8d1d2926acc094"><img src="assets/rest/restShadow.png" class="d-block m-auto" onmouseover="this.src='assets/hover/hoverShadow.png'" onmouseout="this.src='assets/rest/restShadow.png'" alt="Shadowboxing: Fear-Setting Platform" width=100%/></a>
             <!-- <p class="tag_gray">Remote Usability Testing</p><p class="tag_gray">Focus Group</p> -->
             <!-- <button class="button">Read Info</button> -->
@@ -112,7 +122,7 @@
             <p class="chill">02-SOCIAL BETTING</p>
             <p class="tag_empathize">Empathize</p><p class="tag_ideate">Ideate</p><p class="tag_define">Define</p><p class="tag_prototype">Prototype</p><p class="tag_test">Test</p>
             <h2>Ubetcha</h2>
-            <p>Home of the better bettor.</p>
+            <p class="small">Home of the better bettor.</p>
             <a target="_blank" href="https://www.notion.so/UBetcha-c56d7667be854a798e659889e14c8fa2"><img src="assets/rest/restUbetcha.png" class="d-block m-auto" onmouseover="this.src='assets/hover/hoverUbetcha.png'" onmouseout="this.src='assets/rest/restUbetcha.png'" alt="UBetcha: Social Betting Platform" width=100%/></a>
             <!-- <p class="tag_gray">VP Canvas</p><p class="tag_gray">Paper Usability Testing</p><p></p> -->
             <!--<p class="special"></p>-->
@@ -125,7 +135,7 @@
             <p class="chill">03-FRATERNITY RUSH SELECTIONS</p>
             <p class="tag_empathize">Empathize</p><p class="tag_ideate">Ideate</p><p class="tag_define">Define</p><p class="tag_prototype">Prototype</p>
             <h2>Rush.io</h2>
-            <p>First tech frat, first rush app.</p>
+            <p class="small">First tech frat, first rush app.</p>
             <!-- for the world's largest co-ed professional technology fraternity. -->
             <a target="_blank" href="https://www.notion.so/RUSH-IO-ed3a19eb0675449f9ea5754a051e3a6c"><img src="assets/rest/restRush.png" class="d-block m-auto" onmouseover="this.src='assets/hover/hoverRush.png'" onmouseout="this.src='assets/rest/restRush.png'" alt="Rushio: Rush Process App" width=100%/></a>
             <!-- <p class="tag_gray">Survey Design</p><p class="tag_gray">User Interviews</p><p></p> -->
@@ -139,7 +149,7 @@
             <p class="chill">04-FREESTYLE RAP</p>
             <p class="tag_ideate">Ideate</p><p class="tag_define">Define</p><p class="tag_prototype">Prototype</p><p class="tag_test">Test</p>
             <h2>Flow</h2>
-            <p>One spit wonders.</p>
+            <p class="small">One spit wonders.</p>
             <!-- for the world's largest co-ed professional technology fraternity. -->
             <a target="_blank" href="https://cookie-radish-a93.notion.site/Flow-c15e0703c9924a6ebe788e5c37514c1e"><img src="assets/rest/restFlow.png" class="d-block m-auto" onmouseover="this.src='assets/hover/hoverFlow.png'" onmouseout="this.src='assets/rest/restFlow.png'" alt="Flow: Freestyle Rap App" width=100%/></a>
             <!-- <p class="tag_gray">User Interface Design</p><p class="tag_gray">PRD</p><p></p> -->
@@ -186,6 +196,9 @@
         <!-- Footer -->
       <footer>
           <p><span class="wave">👋 </span><img src="assets/face.jpg" onmouseover="this.src='assets/yo.jpg'" onmouseout="this.src='assets/face.jpg'" alt="Rohan's Mii Profile from Wii" width=50px/></p>
+          <br/><br/>
+          <p class="chill" id="name">Coded with <3 by Rohan Barad</p><br/>
+          <p class="chill" id="name">iPhone Mockups by Alexander Shatov</p>
         <!-- Footer Elements -->
           <!-- Social buttons -->
           <!-- <ul>
