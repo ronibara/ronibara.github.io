@@ -15,7 +15,7 @@ font-family: 'Open Sans', sans-serif; */
 } */
 
 body {
-  margin: 40px 20px 40px 20px;
+  margin: 40px 20px 40px 20px; 
   background-color: #FDF6F4;
 }
 
@@ -178,6 +178,43 @@ p{
 /*  color: #483C32;
 */}
 
+.bouncy {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 0.5;
+}
+
+.tabby {
+  width: 6%;
+  position: relative;
+  left: 4px;
+}
+
+sup{
+  vertical-align: top; 
+  position: relative; 
+  top: -0.4em;
+}
+
+/*.context4 p{
+  position: relative;
+  top:-5px;
+}*/
+
+.bouncy:hover, .bouncy:focus {
+  position: relative;
+  top: -1px;
+  background-image: linear-gradient(120deg, #A48281 0%, #FCF6F4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+/*  text-decoration: underline;
+*/}
+
 .problem {
   font-size: 72px;
   text-align: justify;
@@ -196,6 +233,10 @@ p{
 .small {
   font-size: 18px;
   /* change to 12 */
+}
+
+.smally{
+  font-size: 16px;
 }
 
 .smaller {
@@ -350,10 +391,21 @@ p{
   font-weight: 400;
   display: inline;
   padding: 8px 16px;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-right: 10px;
+  color: #646464;
   background-color: #EDEDED;
 }
+
+/*button{
+  padding: 10px 20px;
+  border-color: #FCF6F4;
+  background-color: #FCF6F4;
+  box-shadow: none;
+  font-size: 16px;
+  font-color: #ffffff;
+  border-radius: 25px;
+}*/
 
 /* taggies? */
 
@@ -635,6 +687,118 @@ html {
   font-weight: 200px;
 } */
 
+/*PROJECTS*/
+.intro {
+  margin-top: -3%;
+}
+
+.tab {
+  margin-left: 4%;
+}
+
+.intro h1 {
+  font-size: 36px;
+}
+
+.intro .small {
+  font-size: 18px;
+  margin-top: -1%;
+}
+
+.skinny {
+/*  margin-left: 15%;
+  margin-right: 15%;*/
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.skinny p {
+  line-height: 1.5;
+}
+
+.skinny .smaller {
+  line-height: 1;
+}
+
+.tangibles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.75fr 1.25fr;
+}
+
+hr {
+  height: 1px;
+  color: #646464;
+}
+
+.meat_and_potatoes {
+  overflow: visible;
+}
+
+.meat_and_potatoes h1{
+  margin-bottom: 5%;
+}
+
+
+.meat_and_potatoes h2{
+  margin-top: 3%;
+}
+
+.fat {
+    display: inline-block; 
+    position:relative; 
+    right: -50%;
+    margin-bottom: 5%;
+}
+
+.fat img{
+  width: 100%;
+  position: relative; 
+  left:-50%; 
+}
+
+/*.fat img{
+    width: 1000px;
+    position: relative; 
+    left:-50%; 
+}*/
+
+.fat .buttons{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.fat .buttons img{
+  width: 5%;
+  display: inline;
+}
+
+.buttons {
+  text-align: center;
+}
+
+#slide_marker {
+  vertical-align: middle;
+  display: inline;
+  position: relative;
+  left:-50%;
+  margin-left: auto;
+  margin-right: auto
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #767676;
+  letter-spacing: 1px;
+}
+
+/*.fat .buttons p{
+  display: inline;
+}
+*/
+.see_more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 
 @media screen and (min-width: 700px) {
   /* nav {
@@ -843,7 +1007,7 @@ html {
   }
 
   .readMore {
-    padding-top: 5px;
+    display: none;
   }
 
   .item_two h1{
@@ -864,6 +1028,15 @@ html {
   body{
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  .skinny {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .fat img{
+    width: 1000px;
   }
 
   /* .problem{
