@@ -270,6 +270,11 @@ sup{
   letter-spacing: 1px;
 }
 
+#higher_up {
+  position: relative;
+  top: -7px;
+}
+
 
 .readMore{
   font-size: 12px;
