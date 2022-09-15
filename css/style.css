@@ -402,6 +402,21 @@ sup{
   background-color: #EDEDED;
 }
 
+.tag_gray2{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  display: block;
+  padding: 16px 16px;
+  border-radius: 4px;
+  color: #1A1B1F;
+  background-color: #F1F1F1;
+}
+
+p .tag_gray2 {
+  margin-bottom: -15px;
+}
+
 /*button{
   padding: 10px 20px;
   border-color: #FCF6F4;
