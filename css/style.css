@@ -843,6 +843,10 @@ hr {
     margin-bottom: 75px;
   }
 
+  #pictures {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .images {
     /* margin-top: -2%;
     margin-left: 11%;
@@ -1239,6 +1243,19 @@ hr {
     margin-bottom: 75px;
   }
 
+  .pictures {
+    column-gap: 36px;
+    /* row-gap: 3.5%; */
+    row-gap: 36px;
+    grid-template-columns: 16% 28% 28% 28%;
+    margin-bottom: 75px;
+  }
+
+
+  .number3 {
+    grid-row: 1/1;
+    grid-column: 4/4;
+  }
 
   .item0, .itemAA {
     grid-row: 1/1;
