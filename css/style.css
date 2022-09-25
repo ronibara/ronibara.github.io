@@ -230,6 +230,10 @@ sup{
   font-weight: 300;
 }
 
+#mems img {
+  border-radius: 1%;
+}
+
 .small {
   font-size: 18px;
   /* change to 12 */
