@@ -27,11 +27,23 @@ body {
   display: none;
 }
 
+#wordsofwisdom{
+  display: none;
+}
+
+#words {
+  display: none;
+}
+
 .emoji_dump {
   display: grid;
   margin-bottom: 40px;
-  grid-template-columns: 5% 90%;
+  grid-template-columns: 20% 75%;
   column-gap: 5%;
+}
+
+.hobby-title {
+  margin-bottom: 4px;
 }
 
 .brands {
@@ -226,7 +238,7 @@ sup{
   font-size: 18px;
 } */
 
-.projects p, .progress p, .emoji_dump p {
+.projects p, .progress p {
   font-weight: 300;
 }
 
@@ -749,6 +761,38 @@ html {
   grid-template-columns: 1fr 1fr 1.75fr 1.25fr;
 }
 
+.team {
+  margin-bottom: 62px;
+}
+
+.office {
+  margin-bottom: 62px;
+}
+
+.tattoos, .vision {
+  margin-bottom: 62px;
+}
+
+.tats, .future {
+  margin-top: 36px;
+}
+
+#dispos{
+  margin-bottom: 24px;
+}
+
+.slack {
+  margin-bottom: -36px;
+}
+
+/*.hobbies .hobby-row{
+  margin-bottom: 4px;
+}*/
+
+.hobby-row img{
+  margin-top: 14px;
+}
+
 hr {
   height: 1px;
   color: #646464;
@@ -796,6 +840,29 @@ hr {
   display: inline;
 }
 
+.super-fat {
+  display: inline-block; 
+  position: relative; 
+  right: -50%;
+  margin-bottom: 5%;
+}
+
+#rotate1 {
+  transform: rotate(2.5deg);
+}
+
+#rotate2 {
+  transform: rotate(-1deg);
+}
+
+#rotate3 {
+  transform: rotate(1deg);
+}
+
+#rotate4 {
+  transform: rotate(-2.5deg);
+}
+
 .buttons {
   text-align: center;
 }
@@ -834,6 +901,53 @@ hr {
 
   body {
     margin: 40px 100px;
+  }
+
+  .team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 42px;
+  margin-bottom: 62px;
+  }
+
+  #wordsofwisdom{
+    display: block;
+  }
+
+  #words {
+    display: grid;
+  }
+
+  .quotes {
+  width: 100%;
+/*  position: relative;
+  left:-50%;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 48px;
+  margin-bottom: 100px;
+  }
+
+  .quotes img{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .hobby-row {
+    display: grid;
+    grid-template-columns: 4% 91%;
+    column-gap: 5%;
+  }
+
+  .tats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 7%;
+  }
+
+  .future {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7%;
   }
 
   .splash {
@@ -903,7 +1017,7 @@ hr {
 
   .emoji_dump {
     display: grid;
-    grid-template-columns: 1% 40% 1% 40%;
+    grid-template-columns: 10% 31% 10% 31%;
     column-gap: 4% 10% 4% 10%;
     margin-bottom: 75px;
   }
@@ -1079,6 +1193,13 @@ hr {
     margin-bottom: 0px;
   } */
 
+  .emoji_dump {
+    display: grid;
+    grid-template-columns: 6% 35% 6% 35%;
+    column-gap: 4% 10% 4% 10%;
+    margin-bottom: 75px;
+  }
+
   .problem, .emoji0 h1, .item0 h1, .coffee1 h1{
     margin-top: 10px;
   }
@@ -1140,104 +1261,7 @@ hr {
     grid-column: 2/2;
   }
 
-  .emoji_dump {
-    grid-template-columns: 24% 1% 25% 1% 25%;
-    /* 33 taken out from above; technically 34 */
-    column-gap: 10% 4% 10% 4% 10%;
-  }
-
-  .emoji0 {
-    grid-row: 1/1;
-    grid-column: 1/1;
-  }
-
-  .emoji1{
-    grid-row: 1/1;
-    grid-column: 2/2;
-  }
-
-  .emoji2{
-    grid-row: 2/2;
-    grid-column: 2/2;
-  }
-
-  .emoji3{
-    grid-row: 3/3;
-    grid-column: 2/2;
-  }
-
-  .emoji4{
-    grid-row: 4/4;
-    grid-column: 2/2;
-  }
-
-  .emoji5{
-    grid-row: 1/1;
-    grid-column: 4/4;
-  }
-
-  .emoji8{
-    grid-row: 2/2;
-    grid-column: 4/4;
-  }
-
-  .emoji7{
-    grid-row: 3/3;
-    grid-column: 4/4;
-  }
-
-  .emoji6{
-    grid-row: 4/4;
-    grid-column: 4/4;
-  }
-
-  .emojione{
-    grid-row: 1/1;
-    grid-column: 3/3;
-    font-size: 16px;
-  }
-
-  .emojitwo{
-    grid-row: 2/2;
-    grid-column: 3/3;
-    font-size: 16px;
-  }
-
-  .emojithree{
-    grid-row: 3/3;
-    grid-column: 3/3;
-    font-size: 16px;
-  }
-
-  .emojifour{
-    grid-row: 4/4;
-    grid-column: 3/3;
-    font-size: 16px;
-  }
-
-  .emojifive{
-    grid-row: 1/1;
-    grid-column: 5/5;
-    font-size: 16px;
-  }
-
-  .emojieight{
-    grid-row: 2/2;
-    grid-column: 5/5;
-    font-size: 16px;
-  }
-
-  .emojiseven{
-    grid-row: 3/3;
-    grid-column: 5/5;
-    font-size: 16px;
-  }
-
-  .emojisix{
-    grid-row: 4/4;
-    grid-column: 5/5;
-    font-size: 16px;
-  }
+  
 
   .projects, .progress {
     column-gap: 36px;
