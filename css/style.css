@@ -433,6 +433,23 @@ p .tag_gray2 {
   margin-bottom: -15px;
 }
 
+.tag_gray3{
+  display: block;
+/*  display: grid;
+  grid-template-columns: 5% 95%;*/
+  padding: 8px 32px;
+  border-radius: 4px;
+  background-color: #F1F1F1;
+}
+
+.tag_gray3 p{
+  color: #1A1B1F;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  /*line-height: 24px;*/
+  font-weight: 400;
+}
+
 /*button{
   padding: 10px 20px;
   border-color: #FCF6F4;
@@ -964,6 +981,11 @@ hr {
   #pictures {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .tag_gray3{
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
 
   .images {
     /* margin-top: -2%;
