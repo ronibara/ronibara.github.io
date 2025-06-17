@@ -1,6 +1,214 @@
 /* font-family: 'Lato', sans-serif;
 font-family: 'Open Sans', sans-serif; */
 
+/* CSS Custom Properties for Theme Colors */
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #FDF6F4;
+  --text-primary: #2A0704;
+  --text-secondary: #333333;
+  --text-muted: #767676;
+  --nav-bg: #ffffff;
+  --nav-text: #767676;
+  --nav-text-hover: #000000;
+  --nav-text-active: #2A0704;
+  --tag-empathize: #FBD6D5;
+  --tag-ideate: #D8E6E1;
+  --tag-define: #E8F4F8;
+  --tag-prototype: #F4E8D1;
+  --tag-test: #E8D1F4;
+  --link-hover-bg: #FDF6F4;
+  --button-bg: #767676;
+  --button-text: white;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-muted: #b0b0b0;
+  --nav-bg: #2d2d2d;
+  --nav-text: #b0b0b0;
+  --nav-text-hover: #ffffff;
+  --nav-text-active: #ffffff;
+  --tag-empathize: #4a2a2a;
+  --tag-ideate: #2a4a4a;
+  --tag-define: #2a3a4a;
+  --tag-prototype: #4a3a2a;
+  --tag-test: #3a2a4a;
+  --link-hover-bg: #2d2d2d;
+  --button-bg: #4a4a4a;
+  --button-text: #ffffff;
+}
+
+/* Dark Mode Toggle Styles - iPhone Settings Style */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: #1a1a1a; /* Almost black background */
+  border: 2px solid #333333;
+  border-radius: 25px;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  overflow: visible; /* Allow arrow to show outside */
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 32px;
+  height: 32px;
+  background: #666666; /* Dark gray circle - less flashy */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1; /* Behind the emoji layers */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  position: absolute;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  z-index: 2; /* Above the gray circle */
+  color: #ffffff; /* White emojis for contrast against dark gray circle */
+}
+
+.theme-toggle .sun-icon {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.theme-toggle .moon-icon {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.theme-toggle .toggle-text {
+  display: none;
+}
+
+/* Dark mode state */
+[data-theme="dark"] .theme-toggle::before {
+  left: calc(100% - 35px);
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  opacity: 0.3;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  opacity: 1;
+}
+
+/* Light mode styling - more noticeable */
+[data-theme="light"] .theme-toggle {
+  background: #F5E6E0; /* Slightly darker than website background for visibility */
+  border: 2px solid #D4C4C0; /* More visible border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+[data-theme="light"] .theme-toggle::before {
+  background: #C4B3AF; /* More visible circle */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .theme-toggle .sun-icon,
+[data-theme="light"] .theme-toggle .moon-icon {
+  color: #2A0704; /* Dark brown text color for contrast */
+}
+
+/* Dark mode styling - more subtle circle */
+[data-theme="dark"] .theme-toggle::before {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white for subtlety */
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon,
+[data-theme="dark"] .theme-toggle .moon-icon {
+  color: #ffffff; /* White emojis for contrast */
+}
+
+/* Hand-drawn text */
+.toggle-arrow {
+  position: absolute;
+  top: -30px; /* Moved down a little bit */
+  right: -90px; /* Moved a little bit to the left */
+  font-size: 16px;
+  color: #2A0704;
+  font-family: 'Caveat', cursive;
+  transform: rotate(-15deg);
+  z-index: 5;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .toggle-arrow {
+  color: #ffffff;
+}
+
+/* Hover effects */
+.theme-toggle:hover {
+  border-color: #666666;
+  transform: scale(1.05);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+  border-color: #B8A8A4; /* Darker border on hover for light mode */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  border-color: #555555; /* Lighter border on hover for dark mode */
+}
+
+.theme-toggle:hover::before {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 699px) {
+  .theme-toggle {
+    width: 60px;
+    height: 35px;
+    margin-left: 15px;
+  }
+  
+  .theme-toggle::before {
+    width: 27px;
+    height: 27px;
+    top: 2px;
+    left: 2px;
+  }
+  
+  .theme-toggle .sun-icon,
+  .theme-toggle .moon-icon {
+    font-size: 14px;
+  }
+  
+  .theme-toggle .sun-icon {
+    left: 8px;
+  }
+  
+  .theme-toggle .moon-icon {
+    right: 8px;
+  }
+  
+  [data-theme="dark"] .theme-toggle::before {
+    left: calc(100% - 29px);
+  }
+}
+
 /* after 339...
 - take out graphics
 - add colorShadow etc to the arrow stuff
@@ -16,12 +224,13 @@ font-family: 'Open Sans', sans-serif; */
 
 body {
   margin: 40px 20px 40px 20px; 
-  background-color: #FDF6F4;
+  background-color: var(--bg-primary);
   min-width: 0; /* Prevents body from expanding beyond viewport */
   max-width: 100vw; /* Ensures content doesn't exceed viewport width */
   box-sizing: border-box; /* Includes padding and border in width calculation */
   overflow-x: hidden; /* Additional prevention of horizontal scrolling */
   position: relative; /* Helps contain the scrollbar */
+  transition: background-color 0.3s ease;
 }
 
 .splash, .coffee {
@@ -188,26 +397,31 @@ body {
 h1{
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  color: #2A0704;
+  color: var(--text-primary);
   /* font-size: 34px; */
+  transition: color 0.3s ease;
 }
 
 h2{
   font-family: 'Lato', sans-serif;
-  color: #2A0704;
+  color: var(--text-primary);
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 h3{
   font-family: 'Lato', sans-serif;
   font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 p{
   font-size: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  color: #333333;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 /*  color: #483C32;
 */}
 
@@ -303,8 +517,9 @@ sup{
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #767676;
+  color: var(--text-muted);
   letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 #higher_up {
@@ -317,13 +532,14 @@ sup{
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #767676;
+  color: var(--text-muted);
   float: right;
   padding-right: 20px;
   /* margin-bottom: 40px; */
   letter-spacing: 1px;
   text-align: right;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .readMore:active{
@@ -375,7 +591,8 @@ sup{
   padding: 1px 5px;
   border-radius: 10%;
   margin-right: 5px;
-  background-color: #FBD6D5;
+  background-color: var(--tag-empathize);
+  transition: background-color 0.3s ease;
 }
 
 
@@ -387,7 +604,8 @@ sup{
   padding: 1px 5px;
   border-radius: 10%;
   margin-right: 5px;
-  background-color: #D8E6E1;
+  background-color: var(--tag-ideate);
+  transition: background-color 0.3s ease;
 }
 
 .tag_define{
@@ -398,7 +616,8 @@ sup{
   padding: 1px 5px;
   border-radius: 10%;
   margin-right: 5px;
-  background-color: #F9EED8;
+  background-color: var(--tag-define);
+  transition: background-color 0.3s ease;
 }
 
 .tag_prototype{
@@ -409,7 +628,8 @@ sup{
   padding: 1px 5px;
   border-radius: 10%;
   margin-right: 5px;
-  background-color: #D6E4F8;
+  background-color: var(--tag-prototype);
+  transition: background-color 0.3s ease;
 }
 
 .tag_test{
@@ -420,7 +640,8 @@ sup{
   padding: 1px 5px;
   border-radius: 10%;
   margin-right: 5px;
-  background-color: #DFD6F6;
+  background-color: var(--tag-test);
+  transition: background-color 0.3s ease;
 }
 
 .special {
@@ -527,23 +748,32 @@ nav {
   align-items: center;
 }
 
+nav > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .links a {
   font-size: 13px;
   padding: 7px 7px;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
-  color: #767676;
+  color: var(--nav-text);
+  transition: color 0.3s ease;
 } 
 
 .links a:hover, .links a:focus {
   /* font-size: 1.6rem; */
-  color: #000000;
+  color: var(--nav-text-hover);
   border-radius: 15%;
-  background-color: #ffffff;
+  background-color: var(--link-hover-bg);
+  transition: all 0.3s ease;
 }
 
 .active a{
-  color: #2A0704;
+  color: var(--nav-text-active);
   font-weight: bold;
   /* text-decoration: underline; */
 }
@@ -554,9 +784,9 @@ nav {
 }
 
 .button {
-  background-color: #767676; /* Green */
+  background-color: var(--button-bg); /* Green */
   border: none;
-  color: white;
+  color: var(--button-text);
   align-items: center;
   padding: 7px 16px;
   border-radius: 6%;
@@ -566,6 +796,7 @@ nav {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .socials {
@@ -575,8 +806,8 @@ nav {
 #last {
   /* padding-right: 29%; */
   font-weight: bold;
-  color: #000000;
-  margin-bottom: 40px;
+  color: var(--text-primary);
+  margin-bottom: 0; /* Remove bottom margin since toggle is next to it */
   text-decoration: none;
   /* font-size: 3.35vw; */
   font-size: 48px;
@@ -588,7 +819,7 @@ nav {
 
 .self {
   font-weight: bold;
-  color: #000000;
+  color: var(--text-primary);
   font-size: 48px;
   font-family: roundRohan;
 }
@@ -601,19 +832,19 @@ nav {
 #blue:hover, #blue:focus {
   color: #0072b1 !important;
   /* font-size: 1.6rem; */
-  background-color: #FDF6F4;
+  background-color: var(--link-hover-bg);
 }
 
 #pink:hover, #pink:focus {
   color: #ea4c89 !important;
   /* font-size: 1.6rem; */
-  background-color: #FDF6F4;
+  background-color: var(--link-hover-bg);
 }
 
 #green:hover, #green:focus {
   color: #1DB954 !important;
   /* font-size: 1.6rem; */
-  background-color: #FDF6F4;
+  background-color: var(--link-hover-bg);
 }
 
 /* #res:hover, #res:focus {
@@ -622,8 +853,8 @@ nav {
 
 #git:hover, #git:focus {
   /* font-size: 1.6rem; */
-  color: #000000;
-  background-color: #FDF6F4;
+  color: var(--text-primary);
+  background-color: var(--link-hover-bg);
 }
 
 /* WORK */
@@ -1538,5 +1769,155 @@ a, button, .links a, .hamburger {
   html {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: auto;
+  }
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .hamburger {
+  background-color: #1a1a1a;
+  border-color: #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hamburger:hover {
+  background-color: #333333;
+  border-color: #666666;
+}
+
+[data-theme="dark"] .hamburger:hover .hamburger-line {
+  background-color: #ffffff;
+}
+
+[data-theme="dark"] .hamburger-line {
+  background-color: #ffffff;
+}
+
+[data-theme="dark"] .caption {
+  color: var(--text-muted);
+}
+
+/* Dark mode styles for project pages */
+[data-theme="dark"] .intro h1 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .intro .small {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .intro .chill {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .meat_and_potatoes h1 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .meat_and_potatoes h2 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .meat_and_potatoes p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .context h2 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .context p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .context .smally {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .context .smaller {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tangibles p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tangibles strong {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .see_more p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .see_more h1 {
+  color: var(--text-primary);
+}
+
+/* Dark mode styles for slideshow buttons */
+[data-theme="dark"] .buttons {
+  background-color: var(--nav-bg);
+}
+
+[data-theme="dark"] #slide_marker {
+  color: var(--text-secondary);
+}
+
+/* Dark mode styles for links */
+[data-theme="dark"] .bouncy {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .bouncy:hover,
+[data-theme="dark"] .bouncy:focus {
+  background-image: linear-gradient(120deg, #666 0%, #333 100%);
+}
+
+/* Dark mode styles for footer */
+[data-theme="dark"] footer {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] footer .chill {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .tag_gray {
+  color: var(--text-muted);
+  background-color: #3a3a3a;
+}
+
+[data-theme="dark"] .tag_gray2 {
+  color: var(--text-secondary);
+  background-color: #3a3a3a;
+}
+
+[data-theme="dark"] .tag_gray3 {
+  background-color: #3a3a3a;
+}
+
+[data-theme="dark"] .tag_gray3 p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] hr {
+  border-color: #3a3a3a;
+}
+
+/* Dark mode mobile menu styles */
+@media screen and (max-width: 699px) {
+  [data-theme="dark"] .links {
+    background-color: #1a1a1a;
+  }
+  
+  [data-theme="dark"] .links::before {
+    background-color: #1a1a1a;
+  }
+  
+  [data-theme="dark"] .links a {
+    color: #ffffff;
+  }
+  
+  [data-theme="dark"] .links li {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
   }
 }

@@ -36,13 +36,14 @@
 
         <!-- Custom Scripts -->
         <script src="js/menu.js"></script>
+        <script src="js/theme.js"></script>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- Alternative font (commented out):
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
         -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">  
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENK8EJZ08D"></script>
@@ -60,7 +61,17 @@
       <header>
         <div class="skip"><a href="#maincontent">Skip to Main Content</a></div>
         <nav>
-          <a href="index.html" id="last">ROHAN</a>
+          <div style="display: flex; align-items: center;">
+            <a href="index.html" id="last">ROHAN</a>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+              <span class="sun-icon">☀️</span>
+              <span class="moon-icon">🌙</span>
+              <div class="toggle-arrow">Try Dark Mode<br/>- Rohan</div>
+            </div>
+          </div>
+          
           <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>

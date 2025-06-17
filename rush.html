@@ -39,7 +39,7 @@
         <!-- Alternative font (commented out):
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
         -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@300;400;600&family=Inter:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">  
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENK8EJZ08D"></script>
@@ -52,6 +52,10 @@
  
         <!-- Bootstrap CSS (commented out) -->
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+
+        <!-- Custom Scripts -->
+        <script src="js/menu.js"></script>
+        <script src="js/theme.js"></script>
     </head>
 
 <!-- things to fix: incorporate 300pt font; turn gray into slideshow; fix tags-->
@@ -60,7 +64,17 @@
       <header>
         <div class="skip"><a href="#maincontent">Skip to Main Content</a></div>
         <nav>
-          <a href="index.html" id="last">ROHAN</a>
+          <div style="display: flex; align-items: center;">
+            <a href="index.html" id="last">ROHAN</a>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+              <span class="sun-icon">☀️</span>
+              <span class="moon-icon">🌙</span>
+              <div class="toggle-arrow">Try Dark Mode<br/>- Rohan</div>
+            </div>
+          </div>
+          
           <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -89,10 +103,10 @@
 		<div class="skinny">
 	        <div class="context">
 	        	<h2>What is Rush?</h2>
-	        	<p class="smally">Last winter, my professional technology fraternity wanted to create an app for displaying information about every applicant during the recruitment deliberation process. With this idea, I teamed up with fellow designers to explore and design a functional system for this app. In less than two months, we were tasked with designing screens for the frat’s App Committee to develop before Winter Recruitment Season. This culminated in Rush: a one-stop shop for rushee information.</p>
+	        	<p class="smally">Last winter, my professional technology fraternity wanted to create an app for displaying information about every applicant during the recruitment deliberation process. With this idea, I teamed up with fellow designers to explore and design a functional system for this app. In less than two months, we were tasked with designing screens for the frat's App Committee to develop before Winter Recruitment Season. This culminated in Rush: a one-stop shop for rushee information.</p>
 	        	<p><strong>Project Overview</strong></p>
-	        	<p class="smally">I cherish this experience for many reasons. First, working with developers gave me a better understanding of how to prepare engineering-ready designs. Second, speaking with the Vice President of Membership helped me practice communicating vertically in order to align our solution with the org’s greater mission.</p>
-	        	<p class="smally">I grew from the design studios with fellow active members and friends, as we shared laughs while critically thinking through different design decisions. Last, but not least, seeing the product get shipped was a delightful experience that I hadn’t felt before as a UX Designer.</p>
+	        	<p class="smally">I cherish this experience for many reasons. First, working with developers gave me a better understanding of how to prepare engineering-ready designs. Second, speaking with the Vice President of Membership helped me practice communicating vertically in order to align our solution with the org's greater mission.</p>
+	        	<p class="smally">I grew from the design studios with fellow active members and friends, as we shared laughs while critically thinking through different design decisions. Last, but not least, seeing the product get shipped was a delightful experience that I hadn't felt before as a UX Designer.</p>
 	        	<div class="tangibles">
 	        		<div class="context1">
 		        		<p><strong>Role</strong></p>
@@ -123,7 +137,7 @@
 	        	<div class="meat_and_potatoes">
 	        		<h1>Problem</h1>
 	        		<h2>Challenge</h2>
-	        		<p class="smally">Kappa Theta Pi’s recruitment experience includes coffee chats, speed dating, written applications, formal interviews, and more to ultimately consider every applicant, or “rushee”, to join the fraternity. From these unique events, there’s an overload of personal interactions among 80+ active members and 150+ rushees. To finally decide on selecting new members, KTP has a “decision night” where active members discuss these interactions amongst themselves.</p>
+	        		<p class="smally">Kappa Theta Pi's recruitment experience includes coffee chats, speed dating, written applications, formal interviews, and more to ultimately consider every applicant, or "rushee", to join the fraternity. From these unique events, there's an overload of personal interactions among 80+ active members and 150+ rushees. To finally decide on selecting new members, KTP has a "decision night" where active members discuss these interactions amongst themselves.</p>
 	        		<p class="smally">Before each active member makes their decision, they sift through notes about each rushee from the recruitment events; however, these notes display so much information in so many different places. Ultimately, once the vote takes place, actives want to feel informed about a given applicant, while still having enough energy to equally consider the rest of the rushees throughout the night.</p>
 	        		<h2>Problem Statement</h2>
 	        		<div class="tag_gray3">
@@ -182,7 +196,7 @@
 
 	        		<h1>Key Takeaways</h1>
 	        		<h2>Anybody can sketch</h2>
-	        		<p class="smally">Sketching is a powerful tool. It’s quick and easy to do, so it’s easy to critique! Most importantly, anybody can do it, from designers to PMs and developers. Thus, it helps the entire team get their ideas out, which helps align their visions with that of designers. Before moving to high fidelity, it’s imperative to hash out every perspective of a design decision, which includes business goals and technical feasability. I learned this after facilitating Crazy 8s with the dev team; it was a win-win, as devs thoroughly enjoyed their field trip to paper and pencil, while I gathered insights from their visions about what’s feasible.</p>
+	        		<p class="smally">Sketching is a powerful tool. It's quick and easy to do, so it's easy to critique! Most importantly, anybody can do it, from designers to PMs and developers. Thus, it helps the entire team get their ideas out, which helps align their visions with that of designers. Before moving to high fidelity, it's imperative to hash out every perspective of a design decision, which includes business goals and technical feasability. I learned this after facilitating Crazy 8s with the dev team; it was a win-win, as devs thoroughly enjoyed their field trip to paper and pencil, while I gathered insights from their visions about what's feasible.</p>
 					<h2>"Not every problem can be solved by an app"</h2>
 	        		<p class="smally">This quote can be directly applied to the legacy of Rush. Our research, ideation, and definitions still stay true; however, when it comes to a solution, making a web-app may be a better fit in the context of rush information. After all, applications and interview notes come in long excerpts, which calls for lots of scrolling on the phone. Nevertheless, the next problem to solve is finding an environment with enough space; active members love having their laptop open during Decision Night, so a web-app is very opportune for spreading out designs and rushee information.</p>
 					<h2>What would I do differently?</h2>
