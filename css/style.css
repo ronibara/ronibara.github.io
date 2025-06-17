@@ -207,6 +207,15 @@ font-family: 'Open Sans', sans-serif; */
   [data-theme="dark"] .theme-toggle::before {
     left: calc(100% - 29px);
   }
+  
+  /* Move "Try Dark Mode" text below toggle on mobile */
+  .toggle-arrow {
+    top: 40px; /* Position below the toggle */
+    right: -10px; /* Moved 20px to the left from -30px */
+    transform: rotate(0deg); /* Remove rotation for better mobile readability */
+    font-size: 14px; /* Slightly smaller for mobile */
+    text-align: center; /* Center the text content */
+  }
 }
 
 /* after 339...
@@ -1920,4 +1929,88 @@ a, button, .links a, .hamburger {
   [data-theme="dark"] .links li {
     border-bottom-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* Mobile Dark Mode Toggle Container */
+.mobile-toggle-container {
+  display: none; /* Hidden by default */
+  justify-content: flex-start; /* Left-align instead of center */
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  padding-left: 20px; /* Add some left padding for visual balance */
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 699px) {
+  /* Hide original toggle in nav on mobile */
+  .theme-toggle {
+    display: none;
+  }
+  
+  /* Show mobile toggle container */
+  .mobile-toggle-container {
+    display: flex;
+  }
+  
+  /* Mobile toggle styles */
+  .mobile-toggle-container .theme-toggle {
+    display: inline-flex;
+    width: 105px; /* 1.5x larger (70px * 1.5) */
+    height: 60px; /* 1.5x larger (40px * 1.5) */
+    margin: 0;
+    border-radius: 37.5px; /* 1.5x larger (25px * 1.5) to maintain pill shape */
+  }
+  
+  .mobile-toggle-container .theme-toggle::before {
+    width: 48px; /* 1.5x larger (32px * 1.5) */
+    height: 48px; /* 1.5x larger (32px * 1.5) */
+    top: 4.5px; /* 1.5x larger (3px * 1.5) */
+    left: 4.5px; /* 1.5x larger (3px * 1.5) */
+  }
+  
+  .mobile-toggle-container .theme-toggle .sun-icon,
+  .mobile-toggle-container .theme-toggle .moon-icon {
+    font-size: 24px; /* 1.5x larger (16px * 1.5) */
+  }
+  
+  .mobile-toggle-container .theme-toggle .sun-icon {
+    left: 12px; /* 1.5x larger (8px * 1.5) */
+  }
+  
+  .mobile-toggle-container .theme-toggle .moon-icon {
+    right: 12px; /* 1.5x larger (8px * 1.5) */
+  }
+  
+  .mobile-toggle-container [data-theme="dark"] .theme-toggle::before {
+    left: calc(100% - 52.5px); /* Fixed calculation for new size (105px - 48px - 4.5px) */
+  }
+  
+  /* Position "Try Dark Mode" text to the right of toggle on mobile */
+  .mobile-toggle-container .toggle-arrow {
+    position: static; /* Remove absolute positioning */
+    margin-left: 120px; /* Move text 50px to the right (increased from 70px) */
+    transform: rotate(0deg); /* Remove rotation for better mobile readability */
+    font-size: 18px; /* Increased by 2pt from 16px */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Add more spacing to the splash section for mobile */
+  .splash {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile toggle text styles */
+.mobile-toggle-text {
+  margin-left: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #2A0704;
+  transform: rotate(-2deg);
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .mobile-toggle-text {
+  color: #ffffff;
 }
