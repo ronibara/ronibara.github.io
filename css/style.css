@@ -1983,7 +1983,7 @@ a, button, .links a, .hamburger {
   }
   
   .mobile-toggle-container [data-theme="dark"] .theme-toggle::before {
-    left: calc(100% - 52.5px); /* Fixed calculation for new size (105px - 48px - 4.5px) */
+    left: calc(100% - 52.5px) !important; /* Scaled from desktop: 35px * 1.5 = 52.5px */
   }
   
   /* Position "Try Dark Mode" text to the right of toggle on mobile */
