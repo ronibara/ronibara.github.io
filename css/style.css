@@ -1574,6 +1574,19 @@ hr {
     margin-right: 15%;
   }
 
+  .archive-projects {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 75px;
+  }
+
+  .archive-projects .item1 { grid-row: 1/1; grid-column: 1/1; }
+  .archive-projects .item2 { grid-row: 1/1; grid-column: 2/2; }
+  .archive-projects .item3 { grid-row: 2/2; grid-column: 1/1; }
+  .archive-projects .item4 { grid-row: 2/2; grid-column: 2/2; }
+  .archive-projects .item5 { grid-row: 3/3; grid-column: 1/1; }
+  .archive-projects .item6 { grid-row: 3/3; grid-column: 2/2; }
+
   .fat img{
     width: 1000px;
   }
@@ -1736,6 +1749,7 @@ hr {
     grid-template-columns: 1fr 1fr;
     margin-right: 3%;
     margin-left: 3%;
+    align-items: center;
   }
 
   /* .switches p {
@@ -1903,6 +1917,35 @@ body.index-page footer {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 50px;
+}
+
+/* Archive page section titles */
+.archive-section-title {
+  font-size: 36px;
+}
+
+@media screen and (min-width: 1200px) {
+  .archive-section-title {
+    margin-bottom: -20px;
+  }
+}
+
+.archive-projects {
+  margin-bottom: 150px;
+}
+
+@media screen and (min-width: 700px) {
+  .archive-projects {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 150px;
+  }
+
+  .archive-projects .item1 { grid-row: 1/1; grid-column: 1/1; }
+  .archive-projects .item2 { grid-row: 1/1; grid-column: 2/2; }
+  .archive-projects .item3 { grid-row: 2/2; grid-column: 1/1; }
+  .archive-projects .item4 { grid-row: 2/2; grid-column: 2/2; }
+  .archive-projects .item5 { grid-row: 3/3; grid-column: 1/1; }
+  .archive-projects .item6 { grid-row: 3/3; grid-column: 2/2; }
 }
 
 /* Dark mode styles for footer */
