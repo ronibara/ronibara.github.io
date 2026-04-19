@@ -146,15 +146,19 @@ font-family: 'Open Sans', sans-serif; */
   top: -30px; /* Moved down a little bit */
   right: -90px; /* Moved a little bit to the left */
   font-size: 16px;
+  font-weight: 600;
   color: #2A0704;
   font-family: 'Caveat', cursive;
   transform: rotate(-15deg);
-  z-index: 5;
+  z-index: 9999;
   pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(253, 246, 244, 0.9);
 }
 
 [data-theme="dark"] .toggle-arrow {
-  color: #ffffff;
+  color: #f0e0dd;
+  text-shadow: 0 0 6px rgba(26, 26, 26, 0.9);
 }
 
 /* Hover effects */
@@ -231,14 +235,18 @@ font-family: 'Open Sans', sans-serif; */
   box-shadow: none;
 } */
 
+html {
+  overflow-x: hidden; /* Prevent horizontal scroll at the root level */
+}
+
 body {
-  margin: 40px 20px 40px 20px; 
+  margin: 40px 20px 40px 20px;
   background-color: var(--bg-primary);
-  min-width: 0; /* Prevents body from expanding beyond viewport */
-  max-width: 100vw; /* Ensures content doesn't exceed viewport width */
-  box-sizing: border-box; /* Includes padding and border in width calculation */
-  overflow-x: hidden; /* Additional prevention of horizontal scrolling */
-  position: relative; /* Helps contain the scrollbar */
+  min-width: 0;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-y: auto; /* Ensure vertical scrolling is always enabled */
+  position: relative;
   transition: background-color 0.3s ease;
 }
 
@@ -484,6 +492,171 @@ sup{
 
 .projects p, .progress p {
   font-weight: 300;
+}
+
+/* ── Work Cards Section ────────────────────────────────────────────── */
+.work-section {
+  margin-bottom: 80px;
+}
+
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  border: 1px solid rgba(0,0,0,0.10);
+  min-height: 450px;
+  transition: transform 0.35s ease;
+  cursor: default;
+}
+
+.work-card:hover {
+  transform: scale(0.99);
+}
+
+.work-card__text {
+  flex: 0 0 calc(36% - 15px);
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.work-card__cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.work-card__company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin: 0 0 20px;
+}
+
+.work-card__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.12);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.work-card__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+}
+
+.work-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.work-card__tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.55);
+}
+
+.work-card__media {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.work-card__media::after {
+  content: 'GIF placeholder';
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.25);
+}
+
+.work-card__media:has(img)::after {
+  display: none;
+}
+
+.work-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* FanDuel card — deep blue radial gradient with grain overlay */
+.work-card__media--fanduel {
+  background: radial-gradient(ellipse at 65% 25%, #2B8AD4 0%, #1260A8 40%, #0A3D78 70%, #061E4A 100%);
+  position: relative;
+}
+
+.work-card__media--fanduel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  background-repeat: repeat;
+  opacity: 0.14;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.work-card__media--fanduel::after {
+  color: rgba(255,255,255,0.25);
+}
+
+[data-theme="dark"] .work-card {
+  border-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .work-card:hover {
+  transform: scale(0.99);
+}
+
+[data-theme="dark"] .work-card__icon {
+  background: rgba(255,255,255,0.15);
+}
+
+[data-theme="dark"] .work-card:hover {
+  transform: scale(0.99);
+}
+
+[data-theme="dark"] .work-card__tag {
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .work-card__media::after {
+  color: rgba(255,255,255,0.2);
 }
 
 #mems img {
@@ -1342,8 +1515,11 @@ hr {
   }
 
   .splash {
-    margin-top: -50px;
-    margin-bottom: 75px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 30px;
+    min-height: calc(100vh - 250px);
+    align-items: start;
   }
   .projects, .progress {
     display: grid;
@@ -1896,27 +2072,9 @@ a, button, .links a, .hamburger {
   background-image: linear-gradient(120deg, #666 0%, #333 100%);
 }
 
-/* Index page: no-scroll full-viewport layout */
+/* Index page layout — scrollable now that work cards exist */
 body.index-page {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-body.index-page main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-
-body.index-page footer {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 50px;
+  display: block;
 }
 
 /* Archive page section titles */
@@ -2098,6 +2256,7 @@ body.index-page footer {
   .splash {
     margin-top: 20px;
   }
+
 }
 
 /* Mobile toggle text styles */
