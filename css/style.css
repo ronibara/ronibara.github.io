@@ -1587,7 +1587,7 @@ hr {
     padding-top: 30px;
     /* Gap is now driven by padding-bottom (viewport-height-relative),
        not min-height, so it stays constant as browser width changes */
-    padding-bottom: max(60px, calc(100vh - 600px));
+    padding-bottom: max(60px, calc(100vh - 700px));
     align-items: start;
   }
   .projects, .progress {
