@@ -2328,6 +2328,14 @@ body.index-page {
 
 }
 
+/* why-whoop context section: stack vertically below iPad width */
+@media screen and (max-width: 767px) {
+  .tangibles {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+}
+
 /* Mobile toggle text styles */
 .mobile-toggle-text {
   margin-left: 20px;
