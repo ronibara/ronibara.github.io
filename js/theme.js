@@ -7,14 +7,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', currentTheme);
-    
+
+    function updateToggleLabel(theme) {
+        const label = document.querySelector('#themeToggle .toggle-arrow');
+        if (!label) return;
+        label.innerHTML = theme === 'dark'
+            ? 'Sorry, Light Mode<br/>- Rohan'
+            : 'Try Dark Mode<br/>- Rohan';
+    }
+
+    updateToggleLabel(currentTheme);
+
     // Function to toggle theme
     function toggleTheme() {
         const currentTheme = html.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        updateToggleLabel(newTheme);
         
         // Add a small animation effect to both toggles
         if (themeToggle) {

@@ -143,15 +143,15 @@ font-family: 'Open Sans', sans-serif; */
 /* Hand-drawn text */
 .toggle-arrow {
   position: absolute;
-  top: -30px; /* Moved down a little bit */
-  right: -90px; /* Moved a little bit to the left */
+  top: -2px;
+  right: -110px;
   font-size: 16px;
   font-weight: 600;
   color: #2A0704;
   font-family: 'Caveat', cursive;
   transform: rotate(-15deg);
   z-index: 9999;
-  pointer-events: none;
+  cursor: pointer;
   white-space: nowrap;
   text-shadow: 0 0 6px rgba(253, 246, 244, 0.9);
 }
